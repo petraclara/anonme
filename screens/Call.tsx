@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Image, StyleSheet, Pressable, Text, View } from "react-native";
+import { Image, StyleSheet, Pressable, Text, View, ScrollView } from "react-native";
 import { TextInput as RNPTextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily } from "../GlobalStyles";
-import {EvilIcons } from "@expo/vector-icons"
+import { EvilIcons, Ionicons } from "@expo/vector-icons"
 
 const Call = () => {
   const navigation = useNavigation();
@@ -55,24 +55,18 @@ const Call = () => {
         style={styles.button}
         placeholder="Search"
         mode="outlined"
-        right={<EvilIcons name="search" size={24} color="black" />}
-        placeholderTextColor="#fff"
+        right={<Ionicons name="search" size={24} color="black" />}
+        placeholderTextColor="#000"
         activeOutlineColor="#7f7f7f"
-        theme={{ colors: { text: "#fff" } }}
+        theme={{ colors: { text: "#000", placeholder: "black" } }}
       />
-      <Pressable
-        style={[
-          styles.groupParent,
-          styles.groupParentLayout,
-          styles.groupParentLayout1,
-        ]}
-        onPress={() => navigation.navigate("CallInfo")}
-      >
+
+      <ScrollView>
         <View
           style={[
-            styles.ellipseParent,
+            styles.ellipseContainer,
             styles.groupParentLayout,
-            styles.groupChildPosition,
+            styles.groupParentLayout1,
           ]}
         >
           <Image
@@ -84,221 +78,86 @@ const Call = () => {
             resizeMode="cover"
             source={require("../assets/ellipse-1111.png")}
           />
-          <Text
-            style={[styles.nancyDrew, styles.nancyTypo, styles.nancyPosition]}
+          <View
+            style={[
+              styles.nancyDrewGroup,
+              styles.nancyGroupLayout,
+              styles.nancyPosition,
+            ]}
           >
-            Nancy Drew
-          </Text>
-        </View>
-        <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
-      </Pressable>
-      <Image
-        style={[styles.callChild, styles.childLayout]}
-        resizeMode="cover"
-        source={require("../assets/ellipse-1111.png")}
-      />
-      <View style={styles.callItem} />
-      <View
-        style={[
-          styles.ellipseGroup,
-          styles.groupParentLayout,
-          styles.groupParentLayout1,
-        ]}
-      >
-        <Image
-          style={[
-            styles.groupChild,
-            styles.childLayout,
-            styles.groupChildPosition,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/ellipse-1111.png")}
-        />
-        <View style={[styles.nancyDrewParent, styles.parentLayout]}>
-          <Text style={[styles.nancyDrew1, styles.nancyTypo]}>Nancy Drew</Text>
-          <View style={[styles.feb2022Position, styles.parentLayout]}>
             <Text
-              style={[styles.thFeb2022, styles.febTypo]}
-            >{`12th Feb,2022 `}</Text>
-            <Image
               style={[
-                styles.groupInner,
-                styles.groupPosition,
-                styles.arrowIconLayout,
+                styles.nancyDrew2,
+                styles.nancyTypo,
+                styles.groupChildPosition,
               ]}
-              resizeMode="cover"
-              source={require("../assets/arrow-22.png")}
-            />
+            >
+              Nancy Drew
+            </Text>
+            <View style={[styles.nancyGroupLayout, styles.feb2022Position]}>
+              <Text
+                style={[styles.thFeb20221, styles.febTypo]}
+              >{`12th Feb,2022 `}</Text>
+              <Image
+                style={[
+                  styles.arrowIcon,
+                  styles.groupPosition,
+                  styles.arrowIconLayout,
+                ]}
+                resizeMode="cover"
+                source={require("../assets/arrow-22.png")}
+              />
+            </View>
           </View>
+          <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
         </View>
-        <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
-      </View>
-      <View
-        style={[
-          styles.ellipseContainer,
-          styles.groupParentLayout,
-          styles.groupParentLayout1,
-        ]}
-      >
-        <Image
-          style={[
-            styles.groupChild,
-            styles.childLayout,
-            styles.groupChildPosition,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/ellipse-1111.png")}
-        />
         <View
           style={[
-            styles.nancyDrewGroup,
-            styles.nancyGroupLayout,
-            styles.nancyPosition,
+            styles.ellipseParent1,
+            styles.groupParentLayout,
+            styles.groupParentLayout1,
           ]}
         >
-          <Text
-            style={[
-              styles.nancyDrew2,
-              styles.nancyTypo,
-              styles.groupChildPosition,
-            ]}
-          >
-            Nancy Drew
-          </Text>
-          <View style={[styles.nancyGroupLayout, styles.feb2022Position]}>
-            <Text
-              style={[styles.thFeb20221, styles.febTypo]}
-            >{`12th Feb,2022 `}</Text>
-            <Image
-              style={[
-                styles.arrowIcon,
-                styles.groupPosition,
-                styles.arrowIconLayout,
-              ]}
-              resizeMode="cover"
-              source={require("../assets/arrow-22.png")}
-            />
-          </View>
-        </View>
-        <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
-      </View>
-      <View
-        style={[
-          styles.groupView,
-          styles.groupParentLayout,
-          styles.groupParentLayout1,
-        ]}
-      >
-        <Image
-          style={[
-            styles.groupChild,
-            styles.childLayout,
-            styles.groupChildPosition,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/ellipse-1111.png")}
-        />
-        <View
-          style={[
-            styles.nancyDrewGroup,
-            styles.nancyGroupLayout,
-            styles.nancyPosition,
-          ]}
-        >
-          <Text
-            style={[
-              styles.nancyDrew2,
-              styles.nancyTypo,
-              styles.groupChildPosition,
-            ]}
-          >
-            Nancy Drew
-          </Text>
-          <View style={styles.feb2022Position}>
-            <Text
-              style={[styles.thFeb20221, styles.febTypo]}
-            >{`12th Feb,2022 `}</Text>
-            <Image
-              style={[styles.groupChild2, styles.groupPosition]}
-              resizeMode="cover"
-              source={require("../assets/arrow-23.png")}
-            />
-          </View>
-        </View>
-        <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
-      </View>
-      <View
-        style={[
-          styles.ellipseParent1,
-          styles.groupParentLayout,
-          styles.groupParentLayout1,
-        ]}
-      >
-        <Image
-          style={[
-            styles.groupChild,
-            styles.childLayout,
-            styles.groupChildPosition,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/ellipse-1111.png")}
-        />
-        <View
-          style={[
-            styles.nancyDrewGroup,
-            styles.nancyGroupLayout,
-            styles.nancyPosition,
-          ]}
-        >
-          <Text
-            style={[
-              styles.nancyDrew2,
-              styles.nancyTypo,
-              styles.groupChildPosition,
-            ]}
-          >
-            Nancy Drew
-          </Text>
-          <View style={styles.feb2022Position}>
-            <Text
-              style={[styles.thFeb20221, styles.febTypo]}
-            >{`12th Feb,2022 `}</Text>
-            <Image
-              style={[styles.groupChild2, styles.groupPosition]}
-              resizeMode="cover"
-              source={require("../assets/arrow-23.png")}
-            />
-          </View>
-        </View>
-        <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
-      </View>
-      <View style={[styles.callInner, styles.callChildBorder]} />
-      <View style={[styles.lineView, styles.callChildBorder]} />
-      <View style={[styles.callChild1, styles.callChildBorder]} />
-      <View style={[styles.callChild2, styles.callChildBorder]} />
-      <View style={[styles.callChild3, styles.callChildBorder]} />
-      <Text style={styles.viewAll}>View all...</Text>
-      <View style={[styles.nancyDrewParent2, styles.nancyGroupLayout]}>
-        <Text
-          style={[
-            styles.nancyDrew2,
-            styles.nancyTypo,
-            styles.groupChildPosition,
-          ]}
-        >
-          Nancy Drew
-        </Text>
-        <View style={styles.feb2022Position}>
-          <Text
-            style={[styles.thFeb20221, styles.febTypo]}
-          >{`12th Feb,2022 `}</Text>
           <Image
-            style={[styles.groupChild2, styles.groupPosition]}
+            style={[
+              styles.groupChild,
+              styles.childLayout,
+              styles.groupChildPosition,
+            ]}
             resizeMode="cover"
-            source={require("../assets/arrow-23.png")}
+            source={require("../assets/ellipse-1111.png")}
           />
+          <View
+            style={[
+              styles.nancyDrewGroup,
+              styles.nancyGroupLayout,
+              styles.nancyPosition,
+            ]}
+          >
+            <Text
+              style={[
+                styles.nancyDrew2,
+                styles.nancyTypo,
+                styles.groupChildPosition,
+              ]}
+            >
+              Nancy Drew
+            </Text>
+            <View style={styles.feb2022Position}>
+              <Text
+                style={[styles.thFeb20221, styles.febTypo]}
+              >{`12th Feb,2022 `}</Text>
+              <Image
+                style={[styles.groupChild2, styles.groupPosition]}
+                resizeMode="cover"
+                source={require("../assets/arrow-23.png")}
+              />
+            </View>
+          </View>
+          <Text style={[styles.text, styles.nancyTypo]}>8:12</Text>
         </View>
-      </View>
+      </ScrollView>
+
     </View>
   );
 };
@@ -385,7 +244,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   goBack: {
-    left: 26,
+    left: 20,
     top: 69,
     width: 40,
     height: 40,
@@ -445,10 +304,10 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   button: {
-    top: 149,
-    width: 315,
+    top: 129,
+    width: 345,
     height: 54,
-    left: 30,
+    left: 20,
     position: "absolute",
   },
   groupChild: {

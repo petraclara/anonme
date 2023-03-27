@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     width: 267,
   },
   joinNowTypo1: {
-    textDecoration: "underline",
+    textDecorationLine: "underline",
     fontSize: 12,
     textAlign: "left",
   },
@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
   depressionGroup1: {
     top: 22,
     left: 17,
-    textDecoration: "underline",
+    textDecorationLine: "underline",
     color: Color.black,
     fontFamily: FontFamily.openSansBold,
     fontWeight: "700",

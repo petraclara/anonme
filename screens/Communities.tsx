@@ -64,10 +64,9 @@ const Communities = () => {
         style={styles.button}
         placeholder="Search"
         mode="outlined"
-        right={<RNPTextInput.Icon style={{ marginTop: "50%" }} name="search" />}
         placeholderTextColor="#fff"
         activeOutlineColor="#7f7f7f"
-        theme={{ colors: { text: "#fff" } }}
+        theme={{ colors: { text: "#000" } }}
       />
       <View
         style={[
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
     width: 148,
   },
   communitiesTypo: {
-    textDecoration: "underline",
+    textDecorationLine: "underline",
     fontSize: 12,
     textAlign: "left",
     color: Color.darkslategray,
@@ -273,7 +272,7 @@ const styles = StyleSheet.create({
   communities1: {
     top: 443,
     left: 207,
-    textDecoration: "underline",
+    textDecorationLine: "underline",
     position: "absolute",
   },
   groupChild: {

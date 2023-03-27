@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     left: 24,
   },
   signIn1: {
-    textDecoration: "underline",
+    textDecorationLine: "underline",
     color: Color.orange,
   },
   signIn: {

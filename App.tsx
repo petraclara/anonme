@@ -68,8 +68,10 @@ function BottomTabsRoot({ navigation }: any) {
             <View
               style={{
                 width: 375,
-                height: 44.5,
+                height: 64.5,
                 flexDirection: "row",
+                justifyContent:"space-around",
+                paddingTop:25  
               }}
             >
               {bottomTabItemsNormal.map((item: any, index: any) => {
@@ -97,7 +99,7 @@ function BottomTabsRoot({ navigation }: any) {
     >
       <Tab.Screen
         name="Call"
-        component={Call}
+        component={Onboard1}
         options={{ headerShown: false }}
       />
       <Tab.Screen
