@@ -33,24 +33,7 @@ const Call = () => {
         resizeMode="cover"
         source={require("../assets/menu.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+      
       <RNPTextInput
         style={styles.button}
         placeholder="Search"

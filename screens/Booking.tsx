@@ -6,6 +6,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color } from "../GlobalStyles";
@@ -30,11 +31,7 @@ const Booking = () => {
           source={require("../assets/go-back.png")}
         />
       </Pressable>
-      <Image
-        style={[styles.buttomtabIcon, styles.bookingChildPosition]}
-        resizeMode="cover"
-        source={require("../assets/buttomtab3.png")}
-      />
+      
       <Image
         style={styles.homeIndicatorIcon}
         resizeMode="cover"
@@ -45,24 +42,7 @@ const Booking = () => {
         resizeMode="cover"
         source={require("../assets/menu.png")}
       />
-      <View style={styles.status}>
-        <Text style={[styles.pm, styles.pmTypo]}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+
       <Text
         style={[
           styles.addictionTherapistPhd,
@@ -140,79 +120,102 @@ awards`}</Text>
         resizeMode="cover"
         source={require("../assets/arrow-1.png")}
       />
-      <View
-        style={[
-          styles.rectangleParent,
-          styles.groupLayout,
-          styles.groupPosition,
-        ]}
-      >
-        <View style={[styles.groupChild, styles.groupLayout]} />
-        <Text style={[styles.drJohnDoe, styles.johnTypo]}>
-          Dr John Doe is a reputable therapist
-        </Text>
-        <Text
+      <ScrollView horizontal>
+        <View
           style={[
-            styles.jessiccaJones,
-            styles.groupItemPosition,
-            styles.availableFlexBox,
-            styles.pmTypo,
+            styles.rectangleParent,
+            styles.groupLayout,
+            styles.groupPosition,
           ]}
         >
-          Jessicca Jones
-        </Text>
-        <Image
-          style={[styles.groupItem, styles.groupItemPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-14.png")}
-        />
-      </View>
-      <View
-        style={[
-          styles.rectangleGroup,
-          styles.groupLayout,
-          styles.groupPosition,
-        ]}
-      >
-        <View style={[styles.groupChild, styles.groupLayout]} />
-        <View style={[styles.groupChild, styles.groupLayout]} />
-        <Text
-          style={[styles.groupItemPosition, styles.johnTypo]}
-        >{`Dr John Doe is a reputable therapist
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text style={[styles.drJohnDoe, styles.johnTypo]}>
+            Dr John Doe is a reputable therapist
+          </Text>
+          <Text
+            style={[
+              styles.jessiccaJones,
+              styles.groupItemPosition,
+              styles.availableFlexBox,
+              styles.pmTypo,
+            ]}
+          >
+            Jessicca Jones
+          </Text>
+          <Image
+            style={[styles.groupItem, styles.groupItemPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-14.png")}
+          />
+        </View>
+        <View
+          style={[
+            styles.rectangleGroup,
+            styles.groupLayout,
+            styles.groupPosition,
+          ]}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text
+            style={[styles.groupItemPosition, styles.johnTypo]}
+          >{`Dr John Doe is a reputable therapist
 She helped me so much.`}</Text>
-        <Text style={styles.johnTypo}>{`Dr John Doe is a reputable therapist
+          <Text style={styles.johnTypo}>{`Dr John Doe is a reputable therapist
 She helped me so much.`}</Text>
-        <Text
-          style={[
-            styles.jessiccaJones,
-            styles.groupItemPosition,
-            styles.availableFlexBox,
-            styles.pmTypo,
-          ]}
-        >
-          Peter Drum
-        </Text>
-        <Text
-          style={[
-            styles.jessiccaJones,
-            styles.groupItemPosition,
-            styles.availableFlexBox,
-            styles.pmTypo,
-          ]}
-        >
-          Peter Drum
-        </Text>
-        <Image
-          style={[styles.groupItem, styles.groupItemPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-14.png")}
-        />
-        <Image
-          style={[styles.groupItem, styles.groupItemPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-14.png")}
-        />
-      </View>
+          <Text
+            style={[
+              styles.jessiccaJones,
+              styles.groupItemPosition,
+              styles.availableFlexBox,
+              styles.pmTypo,
+            ]}
+          >
+            Peter Drum
+          </Text>
+          <Text
+            style={[
+              styles.jessiccaJones,
+              styles.groupItemPosition,
+              styles.availableFlexBox,
+              styles.pmTypo,
+            ]}
+          >
+            Peter Drum
+          </Text>
+          <Image
+            style={[styles.groupItem, styles.groupItemPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-14.png")}
+          />
+          <Image
+            style={[styles.groupItem, styles.groupItemPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-14.png")}
+          />
+        </View>
+        <View style={[styles.groupView, styles.groupLayout, styles.groupPosition]}>
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text style={styles.johnTypo}>{`Dr John Doe is a reputable therapist
+She helped me so much.`}</Text>
+          <Text
+            style={[
+              styles.jessiccaJones,
+              styles.groupItemPosition,
+              styles.availableFlexBox,
+              styles.pmTypo,
+            ]}
+          >
+            Peter Drum
+          </Text>
+          <Image
+            style={[styles.groupItem, styles.groupItemPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-14.png")}
+          />
+        </View>
+
+      </ScrollView>
       <TouchableOpacity
         style={[styles.rectangleContainer, styles.groupChild2Layout]}
         activeOpacity={0.2}
@@ -226,28 +229,7 @@ She helped me so much.`}</Text>
       <Text style={[styles.more, styles.moreTypo, styles.hrFlexBox]}>
         More...
       </Text>
-      <View
-        style={[styles.groupView, styles.groupLayout, styles.groupPosition]}
-      >
-        <View style={[styles.groupChild, styles.groupLayout]} />
-        <Text style={styles.johnTypo}>{`Dr John Doe is a reputable therapist
-She helped me so much.`}</Text>
-        <Text
-          style={[
-            styles.jessiccaJones,
-            styles.groupItemPosition,
-            styles.availableFlexBox,
-            styles.pmTypo,
-          ]}
-        >
-          Peter Drum
-        </Text>
-        <Image
-          style={[styles.groupItem, styles.groupItemPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-14.png")}
-        />
-      </View>
+
     </View>
   );
 };

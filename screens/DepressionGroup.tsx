@@ -20,32 +20,7 @@ const DepressionGroup = () => {
         resizeMode="cover"
         source={require("../assets/group-221.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[
-            styles.vectorIcon,
-            styles.vectorIconLayout,
-            styles.vectorIconLayout1,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/vector.png")}
-        />
-        <Image
-          style={[styles.vectorIcon1, styles.vectorIconLayout]}
-          resizeMode="cover"
-          source={require("../assets/vector1.png")}
-        />
-        <Image
-          style={[
-            styles.vectorIcon2,
-            styles.vectorIconLayout,
-            styles.vectorIconLayout1,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/vector2.png")}
-        />
-      </View>
+      
       <View
         style={[
           styles.rectangleParent,
@@ -143,11 +118,7 @@ const DepressionGroup = () => {
       >{`Dealing With Depression
 And Anxiety
 `}</Text>
-      <Image
-        style={styles.buttomtabIcon}
-        resizeMode="cover"
-        source={require("../assets/buttom-tab1.png")}
-      />
+     
     </View>
   );
 };

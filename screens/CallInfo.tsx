@@ -20,38 +20,12 @@ const CallInfo = () => {
           source={require("../assets/go-back.png")}
         />
       </Pressable>
-      <Image
-        style={styles.buttomtabIcon}
-        resizeMode="cover"
-        source={require("../assets/buttomtab3.png")}
-      />
+    
       <Image
         style={styles.homeIndicatorIcon}
         resizeMode="cover"
         source={require("../assets/home-indicator.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[
-            styles.batteryThreeQuartersIcon,
-            styles.iconLayout,
-            styles.iconPosition,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout, styles.iconPosition]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout, styles.iconPosition]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
       <Text style={styles.callInfo1}>Call Info</Text>
       <Image
         style={styles.callInfoChild}

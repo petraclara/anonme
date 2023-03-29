@@ -32,24 +32,7 @@ const Profile = () => {
         resizeMode="cover"
         source={require("../assets/menu.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout1]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout1]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout1]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+      
       <Text
         style={[styles.thereIsAlways, styles.tue4thFlexBox, styles.tue4thTypo]}
       >

@@ -25,44 +25,13 @@ const Notifications = () => {
         resizeMode="cover"
         source={require("../assets/home-indicator.png")}
       />
-      <View style={styles.status}>
-        <Text style={[styles.pm, styles.pmTypo, styles.pmPosition]}>
-          9:30pm
-        </Text>
-        <Image
-          style={[
-            styles.vectorIcon,
-            styles.vectorIconLayout,
-            styles.vectorIconLayout1,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/vector.png")}
-        />
-        <Image
-          style={[styles.vectorIcon1, styles.vectorIconLayout]}
-          resizeMode="cover"
-          source={require("../assets/vector1.png")}
-        />
-        <Image
-          style={[
-            styles.vectorIcon2,
-            styles.vectorIconLayout,
-            styles.vectorIconLayout1,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/vector2.png")}
-        />
-      </View>
+      
       <Text
         style={[styles.notifications1, styles.youHaveNoFlexBox, styles.pmTypo]}
       >
         Notifications
       </Text>
-      <Image
-        style={[styles.buttomtabIcon, styles.pmPosition]}
-        resizeMode="cover"
-        source={require("../assets/buttom-tab1.png")}
-      />
+      
       <Text style={[styles.youHaveNo, styles.youHaveNoFlexBox]}>
         You have no notifications
       </Text>

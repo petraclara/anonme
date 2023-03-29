@@ -8,6 +8,7 @@ import {
   Text,
   Pressable,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily } from "../GlobalStyles";
@@ -20,184 +21,171 @@ const Homescreen = ({ style }: HomescreenType) => {
   const navigation = useNavigation();
 
   return (
-    <View style={[styles.homescreen, style]}>
-      <Image
-        style={styles.homescreenChild}
-        resizeMode="cover"
-        source={require("../assets/ellipse-110.png")}
-      />
-      <Image
-        style={[styles.homescreenItem, styles.homescreenLayout]}
-        resizeMode="cover"
-        source={require("../assets/ellipse-1111.png")}
-      />
-      <Image
-        style={[styles.homescreenInner, styles.homescreenLayout]}
-        resizeMode="cover"
-        source={require("../assets/ellipse-1111.png")}
-      />
-      <Image
-        style={styles.ellipseIcon}
-        resizeMode="cover"
-        source={require("../assets/ellipse-1111.png")}
-      />
-      <View style={[styles.rectangleParent, styles.rectangleLayout]}>
-        <View style={[styles.groupChild, styles.groupPosition]} />
-        <Text
-          style={[
-            styles.talkToProfessional,
-            styles.buttonFlexBox,
-            styles.connectWithPeopleTypo,
-          ]}
-        >{`Talk to
+    <ScrollView>
+      <View style={[styles.homescreen, style]}>
+        <Image
+          style={styles.homescreenChild}
+          resizeMode="cover"
+          source={require("../assets/ellipse-110.png")}
+        />
+        <Image
+          style={[styles.homescreenItem, styles.homescreenLayout]}
+          resizeMode="cover"
+          source={require("../assets/ellipse-1111.png")}
+        />
+        <Image
+          style={[styles.homescreenInner, styles.homescreenLayout]}
+          resizeMode="cover"
+          source={require("../assets/ellipse-1111.png")}
+        />
+        <Image
+          style={styles.ellipseIcon}
+          resizeMode="cover"
+          source={require("../assets/ellipse-1111.png")}
+        />
+        <ScrollView horizontal>
+        <View style={[styles.rectangleParent, styles.rectangleLayout]}>
+          <View style={[styles.groupChild, styles.groupPosition]} />
+          <Text
+            style={[
+              styles.talkToProfessional,
+              styles.buttonFlexBox,
+              styles.connectWithPeopleTypo,
+            ]}
+          >{`Talk to
 professional
 therapists
 from 
 around the
 globe!`}</Text>
-      </View>
-      <View style={[styles.rectangleGroup, styles.rectangleLayout]}>
-        <View style={[styles.groupChild, styles.groupPosition]} />
-        <Text
-          style={[
-            styles.connectWithPeople,
-            styles.buttonFlexBox,
-            styles.connectWithPeopleTypo,
-          ]}
-        >{`Connect
+        </View>
+        <View style={[styles.rectangleGroup, styles.rectangleLayout]}>
+          <View style={[styles.groupChild, styles.groupPosition]} />
+          <Text
+            style={[
+              styles.connectWithPeople,
+              styles.buttonFlexBox,
+              styles.connectWithPeopleTypo,
+            ]}
+          >{`Connect
 with people
 like you who
 share your 
 challenges`}</Text>
-      </View>
-      <Image
-        style={styles.groupIcon}
-        resizeMode="cover"
-        source={require("../assets/group-4.png")}
-      />
-      <TouchableOpacity
-        style={[styles.button, styles.buttonFlexBox]}
-        activeOpacity={0.2}
-        onPress={() => navigation.navigate("AvailableSpeakers")}
-      >
-        <Text
-          style={[
-            styles.speaklistenAnonymously,
-            styles.professionalsNearYouTypo,
-          ]}
+        </View>
+        </ScrollView>
+        <Image
+          style={styles.groupIcon}
+          resizeMode="cover"
+          source={require("../assets/group-4.png")}
+        />
+        <TouchableOpacity
+          style={[styles.button, styles.buttonFlexBox]}
+          activeOpacity={0.2}
+          onPress={() => navigation.navigate("AvailableSpeakers")}
         >
-          SPEAK/LISTEN ANONYMOUSLY
-        </Text>
-      </TouchableOpacity>
-      <Text
-        style={[styles.professionalsNearYou, styles.professionalsNearYouTypo]}
-      >
-        Professionals Near you
-      </Text>
-      <Pressable
-        style={[styles.nancyDrewParent, styles.nancyLayout]}
-        onPress={() => navigation.navigate("ProfessionalNearYou")}
-      >
-        <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
-        <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
-          Addiction Therapist, PHD
-        </Text>
-        <Image
-          style={[styles.groupInner, styles.groupPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-142.png")}
-        />
-      </Pressable>
-      <View style={[styles.nancyDrewGroup, styles.nancyLayout]}>
-        <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
-        <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
-          Addiction Therapist, PHD
-        </Text>
-        <Image
-          style={[styles.groupInner, styles.groupPosition]}
-          resizeMode="cover"
-          source={require("../assets/group-143.png")}
-        />
-      </View>
-      <View style={styles.nancyDrewContainer}>
-        <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
-        <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
-          Addiction Therapist, PHD
+          <Text
+            style={[
+              styles.speaklistenAnonymously,
+              styles.professionalsNearYouTypo,
+            ]}
+          >
+            SPEAK/LISTEN ANONYMOUSLY
+          </Text>
+        </TouchableOpacity>
+        <Text
+          style={[styles.professionalsNearYou, styles.professionalsNearYouTypo]}
+        >
+          Professionals Near you
         </Text>
         <Pressable
-          style={styles.viewMore}
+          style={[styles.nancyDrewParent, styles.nancyLayout]}
           onPress={() => navigation.navigate("ProfessionalNearYou")}
         >
-          <Text style={styles.viewMore1}>View more...</Text>
+          <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
+          <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
+            Addiction Therapist, PHD
+          </Text>
+          <Image
+            style={[styles.groupInner, styles.groupPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-142.png")}
+          />
         </Pressable>
+        <View style={[styles.nancyDrewGroup, styles.nancyLayout]}>
+          <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
+          <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
+            Addiction Therapist, PHD
+          </Text>
+          <Image
+            style={[styles.groupInner, styles.groupPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-143.png")}
+          />
+        </View>
+        <View style={styles.nancyDrewContainer}>
+          <Text style={[styles.nancyDrew, styles.pmPosition]}>Nancy Drew</Text>
+          <Text style={[styles.addictionTherapistPhd, styles.pmPosition]}>
+            Addiction Therapist, PHD
+          </Text>
+          <Pressable
+            style={styles.viewMore}
+            onPress={() => navigation.navigate("ProfessionalNearYou")}
+          >
+            <Text style={styles.viewMore1}>View more...</Text>
+          </Pressable>
+          <Image
+            style={[styles.groupInner, styles.groupPosition]}
+            resizeMode="cover"
+            source={require("../assets/group-142.png")}
+          />
+        </View>
         <Image
-          style={[styles.groupInner, styles.groupPosition]}
+          style={[styles.phoneIcon, styles.iconLayout1, styles.phoneIconPosition]}
           resizeMode="cover"
-          source={require("../assets/group-142.png")}
+          source={require("../assets/phone1.png")}
         />
+        <Image
+          style={[
+            styles.phoneIcon1,
+            styles.iconLayout1,
+            styles.phoneIconPosition,
+          ]}
+          resizeMode="cover"
+          source={require("../assets/phone1.png")}
+        />
+        <Image
+          style={[
+            styles.phoneIcon2,
+            styles.iconLayout1,
+            styles.phoneIconPosition,
+          ]}
+          resizeMode="cover"
+          source={require("../assets/phone1.png")}
+        />
+        <Image
+          style={styles.homeIndicatorIcon}
+          resizeMode="cover"
+          source={require("../assets/home-indicator.png")}
+        />
+        <Image
+          style={[styles.menuIcon, styles.iconLayout1]}
+          resizeMode="cover"
+          source={require("../assets/menu.png")}
+        />
+        <Pressable
+          style={styles.wrapper}
+          onPress={() => navigation.navigate("Notifications")}
+        >
+          <Image
+            style={styles.icon}
+            resizeMode="cover"
+            source={require("../assets/group-18.png")}
+          />
+        </Pressable>
+        
       </View>
-      <Image
-        style={[styles.phoneIcon, styles.iconLayout1, styles.phoneIconPosition]}
-        resizeMode="cover"
-        source={require("../assets/phone1.png")}
-      />
-      <Image
-        style={[
-          styles.phoneIcon1,
-          styles.iconLayout1,
-          styles.phoneIconPosition,
-        ]}
-        resizeMode="cover"
-        source={require("../assets/phone1.png")}
-      />
-      <Image
-        style={[
-          styles.phoneIcon2,
-          styles.iconLayout1,
-          styles.phoneIconPosition,
-        ]}
-        resizeMode="cover"
-        source={require("../assets/phone1.png")}
-      />
-      <Image
-        style={styles.homeIndicatorIcon}
-        resizeMode="cover"
-        source={require("../assets/home-indicator.png")}
-      />
-      <Image
-        style={[styles.menuIcon, styles.iconLayout1]}
-        resizeMode="cover"
-        source={require("../assets/menu.png")}
-      />
-      <Pressable
-        style={styles.wrapper}
-        onPress={() => navigation.navigate("Notifications")}
-      >
-        <Image
-          style={styles.icon}
-          resizeMode="cover"
-          source={require("../assets/group-18.png")}
-        />
-      </Pressable>
-      <View style={styles.status}>
-        <Text style={[styles.pm, styles.pmPosition]}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 

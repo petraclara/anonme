@@ -40,23 +40,25 @@ import {
 } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Homescreen from "./components/Homescreen";
+import { Ionicons,FontAwesome,MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 function BottomTabsRoot({ navigation }: any) {
   const [bottomTabItemsNormal] = React.useState([
-    <HomeIcon />,
-    <HomeIcon />,
+    <Ionicons name="home-outline" size={27} color="darkgreen" />,
+    <PhoneIcon />,
     <Users />,
-    <User1 />,
     <MessageSquare />,
+    <User1 />,
   ]);
   const [bottomTabItemsActive] = React.useState([
-    <PhoneIcon />,
     <HomeIcon />,
+    <FontAwesome name="phone" size={27} color="darkgreen" />,
     <UsersIcon />,
+    <MaterialCommunityIcons name="message" size={27} color="darkgreen" />,
     <UserIcon />,
-    <MessageSquareIcon />,
   ]);
   return (
     <Tab.Navigator
@@ -70,12 +72,11 @@ function BottomTabsRoot({ navigation }: any) {
                 width: 375,
                 height: 64.5,
                 flexDirection: "row",
-                justifyContent:"space-around",
-                paddingTop:25  
+                justifyContent: "space-around",
+                paddingTop: 25
               }}
             >
               {bottomTabItemsNormal.map((item: any, index: any) => {
-                const isFocused = state.index === index;
                 return (
                   <Pressable
                     key={index}
@@ -99,7 +100,7 @@ function BottomTabsRoot({ navigation }: any) {
     >
       <Tab.Screen
         name="Call"
-        component={Onboard1}
+        component={Homescreen}
         options={{ headerShown: false }}
       />
       <Tab.Screen
@@ -146,7 +147,7 @@ const App = () => {
     <>
       <NavigationContainer>
         {hideSplashScreen ? (
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Navigator initialRouteName="Onboard1" screenOptions={{ headerShown: false }}>
             <Stack.Screen name="BottomTabsRoot" component={BottomTabsRoot} />
             <Stack.Screen
               name="Onboard1"

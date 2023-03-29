@@ -6,6 +6,7 @@ import {
   View,
   Pressable,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import { TextInput as RNPTextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
@@ -15,6 +16,7 @@ const SignUpAnSignIn = () => {
   const navigation = useNavigation();
 
   return (
+    <ScrollView>
     <View style={styles.signUpAnSignIn}>
       <View style={styles.anonmeParent}>
         <Text style={styles.anonme}>ANONME</Text>
@@ -88,6 +90,7 @@ const SignUpAnSignIn = () => {
         </View>
       </View>
     </View>
+    </ScrollView>
   );
 };
 
@@ -173,7 +176,8 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: "center",
     justifyContent: "center",
-    left: 24,
+    marginHorizontal:15,
+    width:"90%"
   },
   fingerprintIcon: {
     width: 25,

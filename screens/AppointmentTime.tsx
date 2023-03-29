@@ -27,11 +27,7 @@ const AppointmentTime = () => {
         />
       </Pressable>
       <View style={[styles.appointmentTimeItem, styles.appointmentPosition]} />
-      <Image
-        style={[styles.buttomtabIcon, styles.appointmentPosition]}
-        resizeMode="cover"
-        source={require("../assets/buttomtab3.png")}
-      />
+      
       <Image
         style={styles.homeIndicatorIcon}
         resizeMode="cover"
@@ -42,24 +38,7 @@ const AppointmentTime = () => {
         resizeMode="cover"
         source={require("../assets/menu.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+      
       <TouchableOpacity
         style={[styles.rectangleParent, styles.groupChildLayout]}
         activeOpacity={0.2}

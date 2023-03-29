@@ -65,30 +65,7 @@ const Chat = () => {
         resizeMode="cover"
         source={require("../assets/home-indicator.png")}
       />
-      <View style={[styles.status, styles.iconLayout1]}>
-        <Text style={[styles.pm, styles.pmPosition, styles.pmTypo]}>
-          9:30pm
-        </Text>
-        <Image
-          style={[
-            styles.batteryThreeQuartersIcon,
-            styles.iconLayout1,
-            styles.iconLayout2,
-          ]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout1, styles.iconLayout2]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout1, styles.iconLayout2]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+      
       <Text style={[styles.saturdayMarch14, styles.todayTypo]}>
         Saturday, March 14, 2022
       </Text>

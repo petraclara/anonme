@@ -21,35 +21,11 @@ const AvailableSpeakers = () => {
         />
       </Pressable>
       <Image
-        style={[styles.buttomtabIcon, styles.pmPosition]}
-        resizeMode="cover"
-        source={require("../assets/buttomtab3.png")}
-      />
-      <Image
         style={styles.homeIndicatorIcon}
         resizeMode="cover"
         source={require("../assets/home-indicator.png")}
       />
-      <View style={styles.status}>
-        <Text style={[styles.pm, styles.pmTypo, styles.pmPosition]}>
-          9:30pm
-        </Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+      
       <Text
         style={[
           styles.availableSpeakers1,
@@ -59,6 +35,7 @@ const AvailableSpeakers = () => {
       >
         Available Speakers
       </Text>
+
       <View style={[styles.speaker2Parent, styles.parentLayout]}>
         <Text style={[styles.speaker2, styles.speaker2FlexBox]}>Speaker 2</Text>
         <Image
@@ -127,6 +104,7 @@ const AvailableSpeakers = () => {
         />
       </View>
     </View>
+
   );
 };
 

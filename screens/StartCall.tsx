@@ -23,24 +23,7 @@ const StartCall = () => {
         resizeMode="cover"
         source={require("../assets/home-indicator.png")}
       />
-      <View style={styles.status}>
-        <Text style={styles.pm}>9:30pm</Text>
-        <Image
-          style={[styles.batteryThreeQuartersIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/batterythreequarters.png")}
-        />
-        <Image
-          style={[styles.signalIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/signal.png")}
-        />
-        <Image
-          style={[styles.wifiIcon, styles.iconLayout]}
-          resizeMode="cover"
-          source={require("../assets/wifi.png")}
-        />
-      </View>
+     
       <Text style={[styles.startCall1, styles.startTypo]}>Start Call</Text>
       <View style={[styles.anonParent, styles.parentLayout]}>
         <Text style={[styles.anon, styles.youTypo]}>Anon</Text>
